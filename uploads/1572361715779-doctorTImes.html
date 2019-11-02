@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Doctor Times</title>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    .c{
+        background-color: ghostwhite;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+    }
+</style>
+</html>
+<body>
+@include('clinicnavlayout')
+
+<div class="c">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <div class="container" >
+        <div class="login-wrap">
+            <div class="login-content" style="background-color: transparent;">
+                <div class="login-logo">
+                    <a href="#">
+                        <img src="images/icon/logo.png" style="height: 80px;" alt="logo">
+                    </a>
+                </div>
+                <div class="login-logo">
+                   <h3>Doctor Times</h3>
+                </div>
+                <div class="login-form">
+                    <form action="/storeDoctor" method="post" enctype="multipart/form-data">
+                        {{ csrf_field() }}
+
+                        <div class="row ">
+                            <label class="col-md-2">Sunday</label>
+                            <label class="col-md-1">
+                                <input type="checkbox" name="day[]" value="sunday" class="checkbox" />
+                            </label>
+                            <div class=" col-md-8 row">
+                                <input class="col-md-5" name="start[]" type="time">
+                                <p class="col-md-1">-</p>
+                                <input class="col-md-5" name="end[]" type="time">
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <label class="col-md-2">Sunday</label>
+                            <label class="col-md-1">
+                                <input type="checkbox" name="day[]" value="sunday" class="checkbox" />
+                            </label>
+                            <div class=" col-md-8 row">
+                                <input class="col-md-5" name="start[]" type="time">
+                                <p class="col-md-1">-</p>
+                                <input class="col-md-5" name="end[]" type="time">
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <label class="col-md-2">Sunday</label>
+                            <label class="col-md-1">
+                                <input type="checkbox" name="day[]" value="sunday" class="checkbox" />
+                            </label>
+                            <div class=" col-md-8 row">
+                                <input class="col-md-5" name="start[]" type="time">
+                                <p class="col-md-1">-</p>
+                                <input class="col-md-5" name="end[]" type="time">
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <label class="col-md-2">Sunday</label>
+                            <label class="col-md-1">
+                                <input type="checkbox" name="day[]" value="sunday" class="checkbox" />
+                            </label>
+                            <div class=" col-md-8 row">
+                                <input class="col-md-5" name="start[]" type="time">
+                                <p class="col-md-1">-</p>
+                                <input class="col-md-5" name="end[]" type="time">
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <label class="col-md-2">Sunday</label>
+                            <label class="col-md-1">
+                                <input type="checkbox" name="day[]" value="sunday" class="checkbox" />
+                            </label>
+                            <div class=" col-md-8 row">
+                                <input class="col-md-5" name="start[]" type="time">
+                                <p class="col-md-1">-</p>
+                                <input class="col-md-5" name="end[]" type="time">
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <label class="col-md-2">Sunday</label>
+                            <label class="col-md-1">
+                                <input type="checkbox" name="day[]" value="sunday" class="checkbox" />
+                            </label>
+                            <div class=" col-md-8 row">
+                                <input class="col-md-5" name="start[]" type="time">
+                                <p class="col-md-1">-</p>
+                                <input class="col-md-5" name="end[]" type="time">
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <label class="col-md-2">Sunday</label>
+                            <label class="col-md-1">
+                                <input type="checkbox" name="day[]" value="sunday" class="checkbox" />
+                            </label>
+                            <div class=" col-md-8 row">
+                                <input class="col-md-5" name="start[]" type="time">
+                                <p class="col-md-1">-</p>
+                                <input class="col-md-5" name="end[]" type="time">
+                            </div>
+                        </div>
+                        <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">submit</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="vendor/jquery.min.js"></script>
+<script src="vendor/image_preview.js"></script>
+</body>
